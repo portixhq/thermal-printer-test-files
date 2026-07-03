@@ -2,7 +2,7 @@
 
 > Ready-made `.bin` files with real ESC/POS byte sequences, for testing thermal printers, printer drivers, and parsers — no need to hand-build test data yourself.
 
-Part of the [PortixOne](https://github.com/PortixOne/portixone) knowledge network. Commands match [escpos-cheatsheet](https://github.com/PortixOne/escpos-cheatsheet) exactly — see [`scripts/generate.mjs`](scripts/generate.mjs) for how every file was built.
+Part of the [PortixOne](https://github.com/portixhq/portixone) knowledge network. Commands match [escpos-cheatsheet](https://github.com/portixhq/escpos-cheatsheet) exactly — see [`scripts/generate.mjs`](scripts/generate.mjs) for how every file was built.
 
 ## Files
 
@@ -38,7 +38,7 @@ cat tickets/hello-world.bin > /dev/usb/lp0
 nc <printer-ip> 9100 < tickets/hello-world.bin
 ```
 
-**Testing a parser instead of a real printer:** read the file as bytes and feed it to whatever ESC/POS parser/emulator you're building or testing — the sequences are documented byte-for-byte in [escpos-cheatsheet](https://github.com/PortixOne/escpos-cheatsheet), so you can assert on exact expected output.
+**Testing a parser instead of a real printer:** read the file as bytes and feed it to whatever ESC/POS parser/emulator you're building or testing — the sequences are documented byte-for-byte in [escpos-cheatsheet](https://github.com/portixhq/escpos-cheatsheet), so you can assert on exact expected output.
 
 ## Regenerating / adding files
 
